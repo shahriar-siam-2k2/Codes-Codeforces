@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+ 
 bool isprime(int n){
     int c=0;
     for(int p=2 ; p<=n ; p++){
@@ -15,7 +15,7 @@ bool isprime(int n){
         return false;
     }
 }
-
+ 
 int main(){
     int n,x,y;
     cin>>n;
