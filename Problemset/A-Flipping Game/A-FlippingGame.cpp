@@ -2,43 +2,25 @@
 using namespace std;
 
 int main(){
-    int n;
+    int n, k, sum=0, c=0, max=-1;
     cin >> n;
-    
-    int k[n+1];
     for(int i=0 ; i<n ; i++){
-        cin >> k[i];
-    }
-
-    int i=0, j=0;
-    for(int f=0 ; f<n ; f++){
-        if(k[f]==0){
-            i=f;
-            break;
+        cin >> k;
+        if(k==0){
+            sum++;
         }
-    }
-    for(int f=n ; f>=0 ; f--){
-        if(k[f]==0){
-            j=f;
-            break;
-        }
-    }
-
-    for(i ; i<=j ; i++){
-        if(k[i]==0){
-            k[i] = 1;
-        }
-        else if(k[i]==1){
-            k[i] = 0;
-        }
-    }
-
-    int c=0;
-    for(int f=0 ; f<n ; f++){
-        if(k[f]==1){
+        else if(k==1){
+            sum--;
             c++;
         }
+
+        if(sum < 0){
+            sum=0;
+        }
+        else if(sum > max){
+            max = sum;
+        }
     }
-    cout << c;
+    cout << max + c;
     return 0;
 }
