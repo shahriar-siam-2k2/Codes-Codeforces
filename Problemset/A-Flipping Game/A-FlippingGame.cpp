@@ -16,14 +16,14 @@ int main(){
         //     temp[k] = a[k];
         // }
         int c=0;
-        for(int j=i ; j<n ; j++){
-            for(int k=j-1 ; k>=0 ; k--){
-                if(a[k] = 1){
-                    c++;
-                }
+        for(int k=i-1 ; k>=0 ; k--){
+            if(a[k]==1){
+                c++;
             }
-            if(a[j] == 0){
-                c++;;
+        }
+        for(int j=i ; j<n ; j++){
+            if(a[j]==0){
+                c++;
             }
         }
         // for(int k=0 ; k<n ; k++){
