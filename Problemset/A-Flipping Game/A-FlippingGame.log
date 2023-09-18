@@ -1,0 +1,16 @@
+#18-9-23 Mon 10:45 PM AIUB Library
+input:
+5
+1 0 0 1 0
+Output: 8
+Ans: 4
+Verdict: WRONG ANS.
+log:
+fc = 0
+n = 5
+a[6] = {1, 0, 0, 1, 0}
+loop-1 >> i=0 (i<n)=YES >>
+                        c=0
+                        loop-2 >> j=i=0 (j<n)=YES >>
+                            loop-3 >> k=(j-1)=-1 (K>=0)=NO >> break loop-3
+                        if(a[0]==0)=NO
