@@ -2,39 +2,30 @@
 using namespace std;
 
 int main(){
-    int n, fc=0;
+    int n, c=0, max1=0;
     cin >> n;
 
     int a[n+1];
-    //int temp[n+1];
     for(int i=0 ; i<n ; i++){
         cin >> a[i];
+        if(a[i]==1){
+            c++;
+        }
     }
 
     for(int i=0 ; i<n ; i++){
-        // for(int k=0 ; k<n ; k++){
-        //     temp[k] = a[k];
-        // }
-        int c=0;
-        for(int k=i-1 ; k>=0 ; k--){
-            if(a[k]==1){
-                c++;
-            }
-        }
+        int temp = c;
         for(int j=i ; j<n ; j++){
             if(a[j]==0){
-                c++;
+                temp++;
             }
-        }
-        // for(int k=0 ; k<n ; k++){
-        //     if(a[k] == 1){
-        //         c++;
-        //     }
-        // }
-        if(fc <= c){
-            fc = c;
+            else if(a[j]==1){
+                temp--;
+            }
+            max1 = max(max1, temp);
         }
     }
-    cout << fc;
+
+    cout << max1;
     return 0;
 }
