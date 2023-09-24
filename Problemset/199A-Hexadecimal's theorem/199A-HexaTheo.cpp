@@ -15,12 +15,12 @@ int main(){
     //     cout << f[i] << endl;
     // }
 
-    for(int i=1 ; i<=n ; i++){
+    for(int i=0 ; i<=n ; i++){
         for(int j=i ; j<=n ; j++){
             for(int k=j ; k<=n ; k++){
                 int sum = f[i] + f[j] + f[k];
                 if(sum == n){
-                    cout << i << " " << j << " " << k;
+                    cout << f[i] << " " << f[j] << " " << f[k];
                     return 0;
                 }
                 else if(sum > n){
